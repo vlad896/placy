@@ -15,16 +15,28 @@ const OG_LOCALE_MAP: Record<Locale, string> = {
 
 /**
  * Build the full URL for a given locale and pathname.
- * With localePrefix: "always", every locale gets an explicit prefix.
+ * With localePrefix: "as-needed", the default locale has no prefix:
+ *   en → https://www.placy.ai/
+ *   el → https://www.placy.ai/el
+ *   es → https://www.placy.ai/es
+ *   ar → https://www.placy.ai/ar
  */
 export function getLocalizedUrl(locale: Locale, pathname: string = "/"): string {
+  const isDefault = locale === routing.defaultLocale;
   const path = pathname === "/" ? "" : pathname;
+
+  if (isDefault) {
+    // Default locale: no prefix → https://www.placy.ai/ or https://www.placy.ai/about
+    return `${SITE_URL}${path || "/"}`;
+  }
+
+  // Non-default locale: prefix → https://www.placy.ai/el or https://www.placy.ai/el/about
   return `${SITE_URL}/${locale}${path}`;
 }
 
 /**
  * Generate hreflang alternate links for all locales.
- * Includes x-default pointing to the default locale.
+ * Includes x-default pointing to the default locale (no prefix).
  */
 export function getAlternates(pathname: string = "/") {
   const languages: Record<string, string> = {};
