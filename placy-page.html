@@ -1,0 +1,687 @@
+<!DOCTYPE html><!-- Last Published: Fri Feb 13 2026 22:00:16 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="www.placy.ai" data-wf-page="68d5a8a91e2801c677ecd0b8" data-wf-site="66ace00354b95dd5f8fea3cf" lang="en"><head><meta charset="utf-8"/><title>Placy Pro | AI Platform for Real Estate</title><link rel="alternate" hrefLang="x-default" href="https://www.placy.ai/"/><link rel="alternate" hrefLang="en" href="https://www.placy.ai/"/><link rel="alternate" hrefLang="el" href="https://www.placy.ai/el"/><link rel="alternate" hrefLang="es" href="https://www.placy.ai/es"/><link rel="alternate" hrefLang="ar" href="https://www.placy.ai/ar"/><meta content="Transform your real estate business with Placy Pro&#x27;s AI assistant. Automate lead management, property searches, and scheduling, offering 24/7 support in 50+ languages." name="description"/><meta content="Placy Pro | AI Platform for Real Estate" property="og:title"/><meta content="Transform your real estate business with Placy Pro&#x27;s AI assistant. Automate lead management, property searches, and scheduling, offering 24/7 support in 50+ languages." property="og:description"/><meta content="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/66db7e570e83281f2aee5fa8_Open%20Graph%20Image.png" property="og:image"/><meta content="Placy Pro | AI Platform for Real Estate" property="twitter:title"/><meta content="Transform your real estate business with Placy Pro&#x27;s AI assistant. Automate lead management, property searches, and scheduling, offering 24/7 support in 50+ languages." property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/css/placy-ai-marketing-website.webflow.shared.8153c1323.min.css" rel="stylesheet" type="text/css" integrity="sha384-gVPBMjQv77caip1RkG3V7bb8NP3YMIH8UWMyN2AQDi//dHuMlxqG1Eg12pQyOFIx" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Inter:300,400,500,600,700","Inter:300,400,500,600,700"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/66c0964ef48f463eaa50b94c_favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/66c096e0ca49535d8bfe591b_webclip.png" rel="apple-touch-icon"/><link href="https://www.placy.ai" rel="canonical"/><style>
+  * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+</style>
+
+
+
+
+
+<!-- dataLayer -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'gtm.init_consent',
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied'
+  });
+  console.log("✅ [Webflow] dataLayer initialized");
+</script>
+
+
+
+
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#000000">
+
+
+
+
+
+<script>
+(function () {
+  const LOCALES = {
+    en: { og: "en_US", path: "" },
+    el: { og: "el_GR", path: "/el" },
+    es: { og: "es_ES", path: "/es" },
+    ar: { og: "ar_AE", path: "/ar" }
+  };
+
+  function detectLang() {
+    const htmlLang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
+    const short = htmlLang.split("-")[0];
+    if (LOCALES[short]) return short;
+
+    const p = location.pathname.toLowerCase();
+    if (p === "/el" || p.startsWith("/el/")) return "el";
+    if (p === "/es" || p.startsWith("/es/")) return "es";
+    if (p === "/ar" || p.startsWith("/ar/")) return "ar";
+    return "en";
+  }
+
+  function setMetaBy(kind, key, content) {
+    if (!content) return;
+    const sel = kind === "name"
+      ? `meta[name="${CSS.escape(key)}"]`
+      : `meta[property="${CSS.escape(key)}"]`;
+
+    let el = document.head.querySelector(sel);
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(kind, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", content);
+
+    if (kind === "name") el.removeAttribute("property");
+    if (kind === "property") el.removeAttribute("name");
+  }
+
+  function rebuildOgLocales(current) {
+    document.head
+      .querySelectorAll('meta[property="og:locale"], meta[property="og:locale:alternate"]')
+      .forEach(el => el.remove());
+
+    const main = document.createElement("meta");
+    main.setAttribute("property", "og:locale");
+    main.setAttribute("content", LOCALES[current].og);
+    document.head.appendChild(main);
+
+    Object.keys(LOCALES).forEach(k => {
+      if (k === current) return;
+      const m = document.createElement("meta");
+      m.setAttribute("property", "og:locale:alternate");
+      m.setAttribute("content", LOCALES[k].og);
+      document.head.appendChild(m);
+    });
+  }
+
+  function stripLocalePrefix(path) {
+    if (path === "/el" || path.startsWith("/el/")) return path.replace(/^\/el(\/|$)/, "/");
+    if (path === "/es" || path.startsWith("/es/")) return path.replace(/^\/es(\/|$)/, "/");
+    if (path === "/ar" || path.startsWith("/ar/")) return path.replace(/^\/ar(\/|$)/, "/");
+    return path;
+  }
+
+  function buildUrl(prefix, basePath) {
+    const u = new URL(location.origin + (prefix + basePath));
+    u.hash = "";
+    u.search = "";
+    return u.toString();
+  }
+
+  function rebuildHreflang(current) {
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
+
+    const basePath = stripLocalePrefix(location.pathname);
+
+    Object.keys(LOCALES).forEach(k => {
+      if (k === current) return;
+      const l = document.createElement("link");
+      l.setAttribute("rel", "alternate");
+      l.setAttribute("hreflang", k);
+      l.setAttribute("href", buildUrl(LOCALES[k].path, basePath));
+      document.head.appendChild(l);
+    });
+
+    const xd = document.createElement("link");
+    xd.setAttribute("rel", "alternate");
+    xd.setAttribute("hreflang", "x-default");
+    xd.setAttribute("href", buildUrl("", basePath));
+    document.head.appendChild(xd);
+  }
+
+  function fixTwitterMeta() {
+    document.head.querySelectorAll('meta[property^="twitter:"]').forEach(m => {
+      const key = m.getAttribute("property");
+      if (!key) return;
+      m.removeAttribute("property");
+      m.setAttribute("name", key);
+    });
+
+    setMetaBy("name", "twitter:site", "@Placy_ai");
+
+    const img =
+      document.head.querySelector('meta[name="twitter:image"]')?.getAttribute("content") ||
+      document.head.querySelector('meta[property="og:image"]')?.getAttribute("content") ||
+      document.head.querySelector('meta[name="og:image"]')?.getAttribute("content");
+
+    if (img) setMetaBy("name", "twitter:image", img);
+  }
+
+  function setOgBasics() {
+    const u = new URL(location.href);
+    u.hash = "";
+    u.search = "";
+    setMetaBy("property", "og:url", u.toString());
+    setMetaBy("property", "og:site_name", "Placy Pro");
+  }
+
+  function setRobots() {
+    setMetaBy("name", "robots", "index, follow, max-image-preview:large");
+    setMetaBy("name", "googlebot", "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+  }
+
+  function run() {
+    const current = detectLang();
+    rebuildOgLocales(current);
+    rebuildHreflang(current);
+    setOgBasics();
+    setRobots();
+    fixTwitterMeta();
+  }
+
+  run();
+
+  const ps = history.pushState;
+  history.pushState = function () {
+    ps.apply(history, arguments);
+    run();
+  };
+  window.addEventListener("popstate", run);
+})();
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": "https://www.placy.ai/#logo",
+  "name": "Placy Pro logo",
+  "contentUrl": "https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/logo_512x512.png",
+  "url": "https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/logo_512x512.png",
+  "width": 512,
+  "height": 512,
+  "caption": "Placy Pro Logo"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": "https://www.placy.ai/#main-image",
+  "name": "Placy Pro website",
+  "contentUrl": "https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/main-image-1200x630.png",
+  "url": "https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/main-image-1200x630.png",
+  "width": 1200,
+  "height": 630,
+  "caption": "Placy Pro website"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.placy.ai/#organization",
+  "name": "Placy Pro",
+  "legalName": "PLACY LTD",
+  "brand": "Placy Pro",
+  "slogan": "AI Sales for real estate",
+  "url": "https://www.placy.ai/",
+  "logo": {
+    "@id": "https://www.placy.ai/#logo"
+  },
+  "image": {
+    "@id": "https://www.placy.ai/#main-image"
+  },
+  "description": "Placy Pro: AI platform for real estate professionals: lead engagement, automation, communication, and insights",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Charilaou Xyloforou 13",
+    "addressLocality": "Agios Athanasios",
+    "postalCode": "4103",
+    "addressRegion": "Limassol",
+    "addressCountry": "CY"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "media inquiries",
+    "email": "m.zhigarev@placy.ai",
+    "name": "Media Inquiries",
+    "description": "Get in contact with our representative to learn more about our company and its journey"
+  }, {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "sales@placy.ai",
+    "name": "Contact Sales",
+    "description": "Get in contact with our sales team to learn more about our product and services"
+  }, {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@placy.ai",
+    "name": "Help & Support",
+    "description": "Get help and assistance using our services and products"
+  }],
+  "sameAs": [
+    "https://cy.linkedin.com/company/placy-ai",
+    "https://www.instagram.com/placy.ai/",
+    "https://www.youtube.com/@placyai",
+    "https://www.facebook.com/placyai/",
+    "https://x.com/Placy_ai",
+    "https://www.tiktok.com/@placy",
+    "https://www.threads.net/@placy.ai"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.placy.ai/#website",
+  "url": "https://www.placy.ai/",
+  "name": "Placy Pro",
+  "alternateName": "Placy.ai",
+  "description": "Placy Pro: AI platform for real estate professionals: lead engagement, automation, communication, and insights",
+  "image": {
+    "@id": "https://www.placy.ai/#main-image"
+  },
+  "publisher": {
+    "@id": "https://www.placy.ai/#organization"
+  },
+  "isAccessibleForFree": true,
+  "inLanguage": ["en", "el", "es", "ar"],
+  "keywords": ["Real Estate", "Real Estate AI Agent", "Real Estate AI Sales", "Real Estate lead engagement", "Placy Pro"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebApplication", "SoftwareApplication"],
+  "@id": "https://www.placy.ai/#webapp",
+  "name": "Placy Pro",
+  "url": "https://dashboard.placy.ai/",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Real estate",
+  "operatingSystem": "Web",
+  "publisher": {
+    "@id": "https://www.placy.ai/#organization"
+  },
+  "image": {
+    "@id": "https://www.placy.ai/#main-image"
+  },
+  "description": "Placy Pro: AI platform for real estate teams that automates lead engagement and workflows across messaging, phone, and web",
+  "featureList": [
+    "Lead engagement and qualification",
+    "Automations and follow-ups",
+    "Multilingual support (50+ languages)",
+    "CRM connectivity",
+    "Voice and messaging channels"
+  ]
+}
+</script>
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://analytics.ostr.io/" crossorigin>
+<link rel="dns-prefetch" href="https://analytics.ostr.io/">
+<script async defer type="text/javascript" src="https://analytics.ostr.io/P3Fjy7ruFM6cwRspL.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsslider@1/cmsslider.js"></script>
+<meta name="ostrio-domain" content="GWiyiEZPa7vIQ0oWkp1IKm2FdAIxAD-oV49R3C5jjiH">
+
+
+
+<style>
+.hero-h1{ 
+	margin-left:-1rem; 
+}
+
+.h1-rotator{
+  position:relative;
+  display:block;          
+  width:max-content;      
+}
+
+
+.h1-rotator .rotator-active{
+  position:absolute;
+  left:0;
+  top:0;
+
+  opacity:0;
+  transform:translateY(.22em);
+  transition:opacity .36s cubic-bezier(.22,1,.36,1),
+             transform .36s cubic-bezier(.22,1,.36,1);
+}
+
+
+.h1-rotator .rotator-active.is-current{
+  position:relative;
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+</style>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.placy.ai/#webpage",
+  "url": "https://www.placy.ai/",
+  "name": "Placy Pro | AI Platform for Real Estate",
+  "description": "Transform your real estate business with Placy Pro's AI assistant. Automate lead management, property searches, and scheduling, offering 24/7 support in 50+ languages.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://www.placy.ai/#website"
+  },
+  "publisher": {
+    "@id": "https://www.placy.ai/#organization"
+  },
+  "mainEntity": {
+    "@id": "https://www.placy.ai/#organization"
+  }
+}
+</script>
+<script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf%2F66ba5a08efe71070f98dd10a%2F6853307b624ca8babc750676%2Fmk9rgqql-1.1.1.js" type="text/javascript"></script></head><body class="body-white"><div data-animation="default" class="navbar-all w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="fccba5ca-6ee9-789e-32d5-783ed6f718e1" role="banner" data-duration="400"><header class="navbar--ontainer"><a href="/" aria-current="page" class="navbar-logo-link w-nav-brand w--current"><img width="110" height="44" alt="Placy logo with a house icon in a circle next to the brand name." src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/67ab740dbea97e1dd627de13_Navbar-Logo-Black.svg" loading="lazy" class="navbar-logo-black"/><img width="110" height="44" alt="Placy logo with a house icon in a circle next to the brand name." src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/67ab740d1a45a4b902988521_Navbar-Logo-White.svg" loading="lazy" class="navbar-logo-white"/></a><nav role="navigation" class="menu-wrapper w-nav-menu"><div class="navbar-menu-left"><a href="https://www.placy.ai/modules/lead-engagement" class="navbar-link-s hidden w-nav-link">Lead Engagement</a><a href="/blogs" class="navbar-link-s hidden w-nav-link">Blog</a><a href="/media" class="navbar-link-s hidden w-nav-link">Media</a><div data-hover="false" data-delay="50" class="dropdown w-dropdown"><div class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon w-icon-dropdown-toggle"></div><div class="navlink-dropdown">Products</div></div><nav class="dropdown-list-2 w-dropdown-list"><a href="https://www.placy.ai/modules/lead-engagement" class="dropdown-link w-dropdown-link">Lead Engagement</a><a href="#" class="dropdown-link soon w-dropdown-link">Agent Copilot<sup> Soon</sup></a><a href="#" class="dropdown-link soon w-dropdown-link">Lead Generation<sup> Soon</sup></a><a href="#" class="dropdown-link soon w-dropdown-link">Analytics Dashboard<sup> Soon</sup></a><a href="#" class="dropdown-link soon w-dropdown-link">Smart Outreach<sup> Soon</sup></a><a href="#" class="dropdown-link soon w-dropdown-link">Property Management<sup> Soon</sup></a></nav></div><div data-hover="false" data-delay="50" class="dropdown w-dropdown"><div class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon w-icon-dropdown-toggle"></div><div class="navlink-dropdown">Features</div></div><nav class="dropdown-list-2 w-dropdown-list"><a href="https://www.placy.ai/feature/analyze-performance" class="dropdown-link w-dropdown-link">Analyze Performance</a><a href="https://www.placy.ai/feature/customize-the-assistant" class="dropdown-link w-dropdown-link">Customize The Assistant</a><a href="https://www.placy.ai/feature/ask-answer-questions" class="dropdown-link w-dropdown-link">Ask &amp; Answer Questions</a><a href="https://www.placy.ai/feature/chat-on-whatsapp" class="dropdown-link w-dropdown-link">Chat on WhatsApp</a><a href="https://www.placy.ai/feature/score-qualify-leads" class="dropdown-link w-dropdown-link">Score &amp; Qualify Leads</a><a href="https://www.placy.ai/feature/reply-anytime" class="dropdown-link w-dropdown-link">Reply Anytime</a><a href="https://www.placy.ai/feature/receive-phone-calls" class="dropdown-link w-dropdown-link">Receive Phone Calls</a><a href="https://www.placy.ai/feature/greet-incoming-leads" class="dropdown-link w-dropdown-link">Greet Incoming Leads</a><a href="https://www.placy.ai/feature/connect-crm" class="dropdown-link w-dropdown-link">Connect CRM</a><a href="https://www.placy.ai/feature/speak-multiple-languages" class="dropdown-link w-dropdown-link">Speak Multiple Languages</a></nav></div><div data-hover="false" data-delay="50" class="dropdown hidden w-dropdown"><div class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon w-icon-dropdown-toggle"></div><div class="navlink-dropdown">Solutions</div></div><nav class="dropdown-list-2 big w-dropdown-list"><div class="w-layout-vflex flex-block-2"><div class="title-navbar">SOLUTIONS FOR COMPANIES</div><a href="#" class="dropdown-link w-dropdown-link">For Agencies</a><a href="#" class="dropdown-link w-dropdown-link">For Developers</a><a href="#" class="dropdown-link w-dropdown-link">For Property Management</a><a href="#" class="dropdown-link w-dropdown-link">For Short Term Rentals</a></div><div class="w-layout-vflex flex-block-2"><div class="title-navbar">SOLUTIONS FOR TEAMS</div><a href="#" class="dropdown-link w-dropdown-link">For Marketing</a><a href="#" class="dropdown-link w-dropdown-link">For Sales</a><a href="#" class="dropdown-link w-dropdown-link">For Service</a></div></nav></div><div data-hover="false" data-delay="50" class="dropdown w-dropdown"><div class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon w-icon-dropdown-toggle"></div><div class="navlink-dropdown">Resources</div></div><nav class="dropdown-list-2 w-dropdown-list"><div class="w-layout-vflex flex-block-2"><div class="title-navbar">LEARN MORE ABOUT PLACY</div><a href="/about-us" class="dropdown-link w-dropdown-link">About Us</a><a href="/blogs" class="dropdown-link w-dropdown-link">Blog</a><a href="/media" class="dropdown-link w-dropdown-link">Media</a></div><div class="w-layout-vflex flex-block-2"><div class="title-navbar">GET HELP</div><a href="/pages/talk-to-sales" class="dropdown-link w-dropdown-link">Talk to Sales</a></div></nav></div><div data-hover="false" data-delay="50" class="dropdown w-dropdown"><div data-w-id="af936fd3-2c44-1451-31b0-722d7e734a23" class="dropdown-toggle-2 w-dropdown-toggle"><div class="icon w-icon-dropdown-toggle"></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68e52643580386c461a9e217_translate-01.svg" loading="lazy" alt="Language" class="locale-icon"/></div><nav class="dropdown-list-2 w-dropdown-list"><div class="w-locales-list"><div role="list" class="locales-list w-locales-items"><div role="listitem" class="locale w-locales-item"><a hreflang="en" href="/" aria-current="page" class="dropdown-link w--current">English</a></div><div role="listitem" class="locale w-locales-item"><a hreflang="el" href="/el" class="dropdown-link">Ελλάδα</a></div><div role="listitem" class="locale w-locales-item"><a hreflang="es" href="/es" class="dropdown-link">Español</a></div><div role="listitem" class="locale w-locales-item"><a hreflang="ar" href="/ar" class="dropdown-link">العربية</a></div></div></div></nav></div></div><div class="navbar-menu-right"><a href="#" data-w-id="fccba5ca-6ee9-789e-32d5-783ed6f71901" class="button-transparent-3 black w-button">Book a demo</a></div><a href="/pages/placy-pro-ai-demo-listing" class="button-s-nav transparent-style w-button">Try Placy</a></nav><div class="navbar-menu-button w-nav-button"><div class="menu-icon"><div class="menu-icon-line-top"></div><div class="menu-icon-line-middle"><div class="menu-icon-line-middle-inner"></div></div><div class="menu-icon-line-bottom"></div></div></div></header><div id="global-lead-form" data-w-id="a79275d4-ddbd-4e66-f0b5-d482d8e90542" class="lead-form-initial-5min"><div class="popup-background-close"></div><section id="Contact-Section" class="section-request-demo"><div class="lead-form-block"><div class="container-small-demo-lead-form"><div class="padding-section-large-lead-form"><div class="lead-form-heading-paragraph"><div class="form-header-wrapper"><h3 class="text-display-l black">Book a Demo</h3><a data-w-id="a79275d4-ddbd-4e66-f0b5-d482d8e9054d" href="#" class="popup-close-button w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/67a3730af630ada056500102_close-icon.svg" loading="lazy" alt="UI icon: Close"/></a></div><p class="text-body-xl black">Learn how Placy Pro can save you time and boost your deals with our innovative features</p></div><div class="code-embed-5 w-embed w-iframe w-script"><iframe
+    src="https://api.leadconnectorhq.com/widget/form/D4dD2EsmnE18Dq5yCkHQ"
+    style="width:100%;height:625px;border:none;border-radius:0px"
+    id="inline-D4dD2EsmnE18Dq5yCkHQ" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Book Demo Website EN"
+    data-height="625"
+    data-layout-iframe-id="inline-D4dD2EsmnE18Dq5yCkHQ"
+    data-form-id="D4dD2EsmnE18Dq5yCkHQ"
+    title="Book Demo Website EN"
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script></div></div></div></div></section></div></div><main id="main-content" class="full-page-wrapper display-flex"><section class="section-50-50 white b2b-style"><div class="container-left auto-height b2b-style"><div class="header-wrapper b2b-page"><div class="w-layout-vflex headline-wrapper"><div class="code-embed-10 w-embed"><h1 class="hero-h1">
+  <span class="h1-rotator">
+    <span class="text-display-xl rotator-active is-current">
+      AI Platform
+    </span>
+
+    <span class="text-display-xl rotator-active" aria-hidden="true">
+      AI Automations
+    </span>
+    <span class="text-display-xl rotator-active" aria-hidden="true">
+      AI Sales
+    </span>
+    <span class="text-display-xl rotator-active" aria-hidden="true">
+      AI Insights
+    </span>
+    <span class="text-display-xl rotator-active" aria-hidden="true">
+      AI Communication
+    </span>
+  </span>
+
+  <span class="text-display-xl h1-home">
+    for Real Estate
+  </span>
+</h1></div></div><p class="text-body-l align-left black">Equip your team with an AI that handles the heavy lifting: automating marketing campaigns, answering calls instantly, and guiding agents through every negotiation.<br/></p><div class="w-layout-vflex two-buttons-wrapper"><a href="#" class="button-xl black w-button">Book a demo</a><a href="/pages/placy-pro-ai-demo-listing" class="button-xl-link outlined w-button">Try Placy</a></div></div></div><div class="container-right auto-height b2b-style"><div class="w-layout-vflex flex-block lottie-centered"><div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo video-frame-desktop hidden"><iframe src="https://www.youtube-nocookie.com/embed/coHE09hg7dA?rel=0&amp;controls=0&amp;autoplay=0&amp;mute=0&amp;start=0" frameBorder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="Messengers Leads That Convert - Here&#x27;s How!"></iframe></div><div style="padding-top:56.17021276595745%" class="w-embed-youtubevideo video-frame-mobile hidden"><iframe src="https://www.youtube-nocookie.com/embed/wbODz2oUlgw?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameBorder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="How a real estate agent created a copy of himself?"></iframe></div><div class="lottie-animation-5" data-w-id="5dade9ac-3fb8-845b-d08d-b62adf432569" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/694bb383bb8587cffe973ae3_61063b2861e82f257ad8c06378a61c1f_Main-Image%20%282%29.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="6.983333333333333"></div></div></div><div class="video-1-b2b"><div class="code-embed-4 w-embed"><div class="background-video w-background-video w-background-video-atom">
+  <video autoplay loop muted playsinline data-object-fit="cover" style="width: 100%; height: 100%;">
+    <source src="https://dl.dropboxusercontent.com/scl/fi/5r4zisvwwltaxi5qm9phh/Cloth_02_-light_theme-2.mp4?rlkey=hata6uarz4h66188hup16mpt5&st=qbmbc63c&dl=0" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6853519fb7e5174cfd036293_b1524eb992fefe003641da1be66b3662_bg-gradient.avif" loading="lazy" alt="" class="hero-bg-img"/></div></section><div class="trusted-loop-section"><div class="w-layout-vflex heading-center"><div class="trust-info-wrapper invert-filter"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/679b64541061038f83d4c830_trust-icon.svg" loading="lazy" alt="Trust and security icon for real estate platform reliability"/><p class="text-body-l align-left">Helping agents close deals at</p></div></div><div class="carousel-loop-section"><div class="carousel-container"><div class="carousel-logos-collection w-dyn-list"><div role="list" class="logo-loop-wrapper w-dyn-items"><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910eb5429b65ad989342d7_kw-seven-logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo.avif" loading="lazy" alt="" sizes="(max-width: 991px) 100vw, 964px" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo-p-500.png 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo.avif 964w" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/688e493ce99c3d267f7f9d13_apartmentstoronto_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/685ecfd3d8f5e11e063db3c8_delfi_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/685ecf1f82806500b91f14e2_greekhome_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b926cc3f7f98bbbfceac5_chara_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b934baf4bea2e69c4d7ed_myspace_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68176ae0ce545055b2efdcfd_sweet-home-estates_logo.png" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d4cb0085b603ee8c76b9_remax_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b919dd8629032954afb22_squareone_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d4f4513f5fe7c8211068_livadhiotis_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b91b383f4a923fc5c997f_century21_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b91862bebc0be958b69a0_replace_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d553e2f256be8936c872_movingdoors_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d55fd7b964ee9b1144d3_IPN_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d570f5a25e37cb82627c_4buy%26sell_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910f7ff0896a77dcf6fd46_askwire_logo.avif" loading="lazy" alt="" class="logo-client-s b2b"/></div></div></div><div class="carousel-logos-collection w-dyn-list"><div role="list" class="logo-loop-wrapper w-dyn-items"><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910eb5429b65ad989342d7_kw-seven-logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo.avif" loading="lazy" alt="" sizes="(max-width: 991px) 100vw, 964px" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo-p-500.png 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910ebda710a1c61c14e242_domenica-group-logo.avif 964w" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/688e493ce99c3d267f7f9d13_apartmentstoronto_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/685ecfd3d8f5e11e063db3c8_delfi_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/685ecf1f82806500b91f14e2_greekhome_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b926cc3f7f98bbbfceac5_chara_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b934baf4bea2e69c4d7ed_myspace_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68176ae0ce545055b2efdcfd_sweet-home-estates_logo.png" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d4cb0085b603ee8c76b9_remax_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b919dd8629032954afb22_squareone_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d4f4513f5fe7c8211068_livadhiotis_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b91b383f4a923fc5c997f_century21_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b91862bebc0be958b69a0_replace_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d553e2f256be8936c872_movingdoors_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d55fd7b964ee9b1144d3_IPN_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d570f5a25e37cb82627c_4buy%26sell_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div><div role="listitem" class="logo-loop-items-s w-dyn-item"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68910f7ff0896a77dcf6fd46_askwire_logo.avif" loading="lazy" alt="" class="logo-client-s"/></div></div></div></div></div></div><section class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="hero-section-b2b-secondary w-dyn-item"><div class="hero-wrapper align-center b2b"><div class="header-wrapper b2b"><div class="h1-ds-wrapper white-shadow"><h2 class="text-display-xl black">Capture Every Lead and Double Your Results</h2><a href="/modules/lead-engagement" target="_blank" class="button-link w-inline-block"><div class="text-body-l black">Learn more</div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6817abbae3a672f0151b007a_arrow.svg" loading="lazy" alt=""/></a></div></div></div><div class="hero-imgs-scroll"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b9d23c3d31f65619f6309_Calls-1.png" loading="lazy" style="opacity:0" data-w-id="0d26e183-5295-e342-6dcf-ff40a2516626" alt="Placy Pro calls on the phone screen" id="w-node-_0d26e183-5295-e342-6dcf-ff40a2516626-77ecd0b8" class="hero-img-2"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6817b50addd3923b443d3c8c_WhatsApp.avif" loading="lazy" style="opacity:0" data-w-id="5f70a452-f29d-aab1-875d-1bedfb46b764" alt="" id="w-node-_5f70a452-f29d-aab1-875d-1bedfb46b764-77ecd0b8" class="hero-img-1"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b9d1cceca85d76a517989_Score%20%26%20Qualify%20Leads.png" loading="lazy" style="opacity:0" data-w-id="0d7e8203-667d-3df9-ff86-f1974500a035" alt="Score &amp; Qualify Leads" id="w-node-_0d7e8203-667d-3df9-ff86-f1974500a035-77ecd0b8" class="hero-img-3"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6817b50aed0aeea15c5ae223_Multiple%20Languages.avif" loading="lazy" style="opacity:0" data-w-id="5836ac8e-da45-914e-ceaa-9d30a4864062" alt="Supporting over 50 languages" id="w-node-_5836ac8e-da45-914e-ceaa-9d30a4864062-77ecd0b8" class="hero-img-4"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b9cf068eb542600ee0c08_Qobrix.png" loading="lazy" style="opacity:0" data-w-id="23c320c8-8228-aa41-5980-17dfef4ac1dd" alt="Qobrix logo" id="w-node-_23c320c8-8228-aa41-5980-17dfef4ac1dd-77ecd0b8" class="hero-img-5"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/681b9d1306250d93f923af21_Meeting%20with%20Placy%20-%201.png" loading="lazy" style="opacity:0" data-w-id="374f279b-e892-4164-b5bd-248f514c583b" alt="Placy meeting card titled ‘Mr Brown — Showing’. Duration 30 minutes, location Forrest Hill Str. 14. Scheduled for Monday, June 24, from 7:00 PM to 7:45 PM, Europe/Greece time zone. User avatar displayed on the left." id="w-node-_374f279b-e892-4164-b5bd-248f514c583b-77ecd0b8" class="hero-img-6"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6817b50accc61f09885a8103_Reply%20Anytime.avif" loading="lazy" style="opacity:0" data-w-id="90fdaef9-344c-1234-f668-8b22b73575da" alt="24/7 availability " id="w-node-_90fdaef9-344c-1234-f668-8b22b73575da-77ecd0b8" class="hero-img-7"/><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6817b50a30beb658517fb666_Website.avif" loading="lazy" style="opacity:0" data-w-id="b18c6f77-435d-791f-5e24-eb8b19e7b4f5" alt="Website" id="w-node-b18c6f77-435d-791f-5e24-eb8b19e7b4f5-77ecd0b8" class="hero-img-8"/></div></div></div></section><section id="Feature" class="section-features-main b2b"><div class="w-layout-blockcontainer container-1440 w-container"><div class="header-wrapper margin-bottom-big"><h2 class="text-display-xl">Make It Yours! <br/>No Tech Skills Required</h2></div><div class="collection-list-wrapper w-dyn-list"><div role="list" class="feature-list-copy w-dyn-items"><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/web-app" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Web App</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/understand-natural-language" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Understand Natural Language</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/take-over-dialogues" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Take Over Dialogues</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/chat-on-telegram" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Chat on Telegram</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/see-phone-number" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">See Phone Number</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/scale-processes" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Scale Processes</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/follow-up-leads" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Follow-up Leads</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/customize-fast" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Customize Fast</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/chat-on-website" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Chat on Website</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/reply-anytime" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Reply Anytime</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/zero-click-automations" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Use Automations</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/customize-voice" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Customize Voice</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/connect-crm" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Connect CRM</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/analyze-performance" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Analyze Performance</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/book-a-meeting" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Book Appointments</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/enable-multi-tasking" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Enable Multi-tasking</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/score-qualify-leads" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Score &amp; Qualify Leads</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/receive-phone-calls" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Receive Phone Calls</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/get-notifications" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Get Notifications</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/speak-multiple-languages" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Speak Multiple Languages</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/write-emails" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Write Emails</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/ask-answer-questions" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Ask &amp; Answer Questions</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/add-knowledge" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Add Knowledge</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/integrate-tools" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Integrate Tools</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/greet-incoming-leads" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Greet Incoming Leads</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/contact-clients" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Contact Clients</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/transcribe-calls" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Transcribe Calls</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/make-phone-calls" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Make Phone Calls</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/save-history" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Save History</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/chat-on-viber" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Chat on Viber</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/match-properties" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Match Properties</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/promote-additional-services" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Promote Additional Services</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/get-business-insights" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Get Business Insights</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/transfer-dialogues" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Transfer Dialogues</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/customize-the-assistant" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Customize The Assistant</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/time-based-router" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Route Leads</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/optimize-tech-stack" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Optimize Tech Stack</div></a></div></div><div role="listitem" class="collection-item w-dyn-item"><div class="w-layout-blockcontainer feature-chips-container w-container"><a href="/feature/chat-on-whatsapp" target="_blank" class="link-feature-chips w-inline-block"><div class="feature-chips inline">Chat on WhatsApp</div></a></div></div></div></div><article class="button-group align-center"><a href="#" data-w-id="3268ae6f-cc98-1dce-3261-56783e3998de" class="button-xl w-button">Book a demo</a></article></div></section><section class="new-markets-slider-section"><div class="header-wrapper-wide"><h2 class="text-display-xl black">Enterprise-Grade Localization</h2><p class="text-body-l black max-w-fix">Local regulation compliance, dialect-specific training, and market-specific property data.</p></div><div class="big-slider-wrapper"><div data-delay="4000" data-animation="slide" class="team-slider-wrapper w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="12" data-duration="500" data-infinite="false"><div class="mask-2 w-slider-mask"><div class="new-market-slide-wrapper w-slide"><a href="/countries/spain" class="new-market-card w-inline-block"><div class="new-market-info"><h3 class="text-display-l">Spain</h3><p class="text-body-l">La Revolución de la IA en el Sector Inmobiliario Llega con Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6819fce9414c81d9929be081_spain.avif" loading="lazy" alt="Casa Milà architectural landmark in Barcelona, Spain showcasing distinctive curved stone facade" class="image-card-l"/></a></div><div class="new-market-slide-wrapper w-slide"><a href="/countries/cyprus" class="new-market-card w-inline-block"><div class="new-market-info"><h3 class="text-display-l">Cyprus</h3><p class="text-body-l">Γεια σας και καλώς ήρθατε στο μέλλον της τεχνητής νοημοσύνης στην Κύπρο!</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6819fa9f9b88c353d9b06d1c_cyprus.avif" loading="lazy" alt="" class="image-card-l"/></a></div><div class="new-market-slide-wrapper w-slide"><a href="/countries/greece" class="new-market-card w-inline-block"><div class="new-market-info"><h3 class="text-display-l">Greece</h3><p class="text-body-l">Εδώ όπου η Τεχνητή Νοημοσύνη απελευθερώνει το Real Estate</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6819f8e271cb8e13d4339654_9854a359822153bac2483aa675e61148_greece.avif" loading="lazy" alt="" class="image-card-l"/></a></div><div class="new-market-slide-wrapper w-slide"><div class="new-market-card"><div class="new-market-info"><h3 class="text-display-l align-center">The UAE</h3><p class="text-body-l">ثورة الذكاء الاصطناعي في قطاع العقارات الإماراتي تأتي مع Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a008e3aa25f75d19c2ed9_uae.avif" loading="lazy" alt="Burj Khalifa tower in Dubai at sunset, representing UAE luxury real estate market" class="image-card-l"/></div></div><div class="new-market-slide-wrapper w-slide"><div class="new-market-card"><div class="new-market-info"><h3 class="text-display-l align-center">Saudi Arabia</h3><p class="text-body-l">ثورة الذكاء الاصطناعي في قطاع العقارات السعودي تأتي مع Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/6819fffd807f6ccf929fdd3d_saudi-arabia.avif" loading="lazy" alt="" class="image-card-l"/></div></div><div class="new-market-slide-wrapper w-slide"><div class="new-market-card"><div class="new-market-info"><h3 class="text-display-l align-center">The UK</h3><p class="text-body-l">The AI Revolution in UK Real Estate Comes with Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk-p-500.avif 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk-p-800.avif 800w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk-p-1080.avif 1080w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk-p-1600.avif 1600w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk-p-2000.avif 2000w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/681a09b30a7b2dd8dd09ab78_uk.avif 3456w" alt="" class="image-card-l"/></div></div><div class="new-market-slide-wrapper w-slide"><div class="image-card-l">Coming Soon</div><div class="new-market-card"><div class="new-market-info"><h3 class="text-display-l align-center">Canada</h3><p class="text-body-l">The AI Revolution in Canada Real Estate Comes with Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2-p-500.avif 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2-p-800.avif 800w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2-p-1080.avif 1080w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2-p-1600.avif 1600w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2-p-2000.avif 2000w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7065fc49c92da2305362_new-markets-canada-2.avif 3456w" alt="Toronto skyline with CN Tower and residential homes representing Canadian real estate market" class="image-card-l"/></div></div><div class="new-market-slide-wrapper w-slide"><div class="image-card-l">Coming Soon</div><div class="new-market-card"><div class="new-market-info"><h3 class="text-display-l align-center">USA</h3><p class="text-body-l">The AI Revolution in the USA Real Estate Comes with Placy Pro</p></div><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3-p-500.avif 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3-p-800.avif 800w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3-p-1080.avif 1080w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3-p-1600.avif 1600w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68ae7148b8400cbb6cfd8686_new-markets-usa-3.avif 3456w" alt="" class="image-card-l"/></div></div></div><div class="testimonial-slider-left w-slider-arrow-left"><div class="arrow-wrapper"><img src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a0e4912aadb_Chevron%20right-1.svg" loading="lazy" alt="" class="slider-arrow-embed"/></div></div><div class="testimonial-slider-right w-slider-arrow-right"><div class="arrow-wrapper"><img src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a7ce212aacc_Chevron%20right.svg" loading="lazy" alt="" class="slider-arrow-embed"/></div></div><div class="team-slider-nav w-slider-nav w-slider-nav-invert w-round"></div></div></div></section><section class="clients-section b2b"><div class="header-wrapper"><h2 class="text-display-xl">Success Stories</h2></div><div class="testimonials-collection-list-wrapper w-dyn-list"><div role="list" class="testimonials-list-grid w-dyn-items"><div role="listitem" class="testimonials-list-item w-dyn-item"><div class="client-card"><div class="logo-description-client"><div class="logo-testimonial"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d570f5a25e37cb82627c_4buy%26sell_logo.avif" loading="lazy" alt="" height="64" class="logo-full-img"/></div><div class="text-testimonial align-left">We chose to work with Placy Pro to automate part of our work and leverage modern tools that enhance our efficiency. By adopting this new technology, we&#x27;re among the first to benefit. Placy Pro helps us save time with a bot that makes our work better, faster, and more efficient. In the end, we provide better service to our clients while spending less time on tasks.</div></div><div class="client-info-wrapper"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d7b2f38261671b17a3c6_Avatar-IMG-1.avif" loading="lazy" width="48" height="48" alt="" class="image-circle-s"/><div class="client-name-position"><div class="text-body-l align-left weight-medium">Florent Gastine</div><div class="text-body-m color-grey">General Manager</div></div></div></div></div><div role="listitem" class="testimonials-list-item w-dyn-item"><div class="client-card"><div class="logo-description-client"><div class="logo-testimonial"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d553e2f256be8936c872_movingdoors_logo.avif" loading="lazy" alt="" height="64" class="logo-full-img"/></div><div class="text-testimonial align-left">As a young and modern company, we understand how important it is to use progressive technologies in our daily work and how this can improve our operational efficiency. This is precisely why the collaboration with Placy seemed so promising to us. The idea of an AI assistant is simple and brilliant — it doesn’t get tired, it doesn’t burn out, and it’s always polite. Moreover, it works 24/7 and knows the answers to all questions, if it&#x27;s created by a team of professionals, and the Placy is exactly that. The team has been working in real estate for many years, so they fully understand all our needs and preferences. The assistant they created has already helped our clients get answers to their questions and scheduled the first viewings.</div></div><div class="client-info-wrapper"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6797d7df73cf72ff37c444be_Avatar-IMG-2.avif" loading="lazy" width="48" height="48" alt="" class="image-circle-s"/><div class="client-name-position"><div class="text-body-l align-left weight-medium">Tanya Ayueva</div><div class="text-body-m color-grey">Head of Commercial</div></div></div></div></div></div></div></section><section class="new-markets-slider-section black"><div class="header-wrapper-wide margin-bottom"><h2 class="text-display-xl">Why us?</h2></div><div class="question-cards-wrapper"><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Industry Focus<br/>Specialized in the Real Estate Sector</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro was built from the ground up to serve real estate professionals — agents, brokers, and property managers. The platform was developed by PropTech veterans who previously led a NYSE-listed unicorn company and invested in multiple tech companies. Placy&#x27;s feature set and workflows are specifically tailored to the real estate industry&#x27;s needs, distinguishing it from generic AI platforms.</p><p><strong>Why It Matters</strong></p><p>‍</p><ul role="list"><li>Out-of-the-box readiness for real estate tasks (property listings, valuations, mortgage calculations)</li><li>Eliminates the need for costly customization required by non-specialized AI tools</li><li>Keeps agents and staff focused on closing deals rather than adapting general tech to real estate use cases</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Geographic Expertise<br/>Focused on EU and MENA Markets</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro supports localized regulations, languages, and market nuances in Europe and MENA. It helps real estate firms comply with region-specific legal requirements, adapt to cultural expectations, and offer multilingual customer interactions seamlessly.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Faster deployment due to built-in localization and compliance checks</li><li>Multilingual interactions for buyers, sellers, and investors across various European and Middle Eastern countries</li><li>Confidence in meeting regional regulations, whether it’s GDPR or country-specific property laws</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>AI Sophistication<br/>Multiple Optimized Large Language Models </strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro employs more than one AI model, each specialized in different tasks — from rapid response for routine queries to deep analysis for investment potential or advanced translations. This multi-model strategy ensures both speed and accuracy.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Tailored solutions for diverse tasks (fast Q&amp;A, in-depth reasoning, multilingual support)</li><li>Improved user experience via real-time AI responses with minimal latency</li><li>Sets Placy apart from single-model competitors, leading to more accurate and context-rich search results</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Customization and Integration<br/>Real Estate-Ready APIs and Workflows</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro is designed for seamless integration with real estate-specific tools — MLS databases, CRMs, property management systems — and offers customizable workflows for each agency’s unique business processes.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Quick launch with minimal IT overhead (no need for custom coding to link to your CRM or MLS)</li><li>Tailored conversation flows and property search logic for specialized real estate niches</li><li>Increases operational efficiency by consolidating data into one user-friendly interface</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Data Depth<br/>Proprietary Real Estate-Specific Datasets</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro integrates and can support government registries, verified transaction records, API from data providers, and off-market listings unavailable to general platforms. This exclusive data goes beyond basic MLS feeds or freely available online listings.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Delivers ultra-accurate property valuations based on real transaction data</li><li>Provides off-market insights and hidden opportunities for serious investors</li><li>Hard to replicate quickly by competitors, strengthening Placy’s market advantage</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Innovative Features<br/>Multimodal Search + Agentic Frameworks</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro combines advanced semantic and multimodal search (text, voice, images, and video) with agentic frameworks that automate complex tasks — like scheduling viewings, generating property comparisons, or drafting agreements.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Clients can find “cozy homes near parks” or “luxury condos with a gym” using natural language</li><li>Uploading images or describing property features verbally prompts precise search results</li><li>Automates time-consuming tasks—improving agent productivity and customer satisfaction</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Cost Efficiency<br/>Optimized for Industrial Use Cases</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>By focusing on the essential tasks of real estate — property listing, valuation, scheduling, etc. — Placy Pro delivers a more affordable AI solution compared to hiring custom developers or licensing generic AI tools that need heavy modifications.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Reduced initial deployment costs and lower total cost of ownership</li><li>Speeds up time-to-value; real estate professionals can see immediate ROI</li><li>No hidden fees or endless “custom integration” expenses</li></ul></div></nav></div></div><div class="question-card"><div data-hover="false" data-delay="0" class="dropdown-question-card w-dropdown"><div class="dropdown-toggle question w-dropdown-toggle"><div class="text-display-m white align-left"><strong>Comprehensive Support<br/>Analytics, Monitoring, and Rapid Onboarding</strong></div></div><nav class="dropdown-list black w-dropdown-list"><div class="rich-text-light white-invert w-richtext"><p><strong>What It Is</strong></p><p>Placy Pro offers ongoing, real estate-focused analytics and error-correction tools, along with dedicated post-deployment support. From a quick and painless setup to continuous monitoring, Placy ensures agencies can operate at peak efficiency.</p><p>‍</p><p><strong>Why It Matters</strong></p><ul role="list"><li>Immediate visibility into chatbot performance, property searches, and user engagement</li><li>Rapid troubleshooting and dedicated support teams familiar with real estate specifics</li><li>Onboarding of new agents and offices is simple—minimizing downtime and training costs</li></ul></div></nav></div></div></div></section><section class="faq-section radius-before-footer"><div class="sub-header-wrapper"><h2 class="text-display-xl black">FAQ</h2></div><div class="w-dyn-list"><div role="list" class="faq-questions-wrapper w-dyn-items"><div role="listitem" class="w-dyn-item"><div data-delay="0" data-hover="false" class="dropdown-faq w-dropdown"><div class="dropdown-toggle-3 w-dropdown-toggle"><div data-faq-q="true" class="text-display-m black align-left">How long does it take to get approved by WhatsApp/Telegram/Other messenger or tool to use Placy Pro?</div><div class="icon-dropdown w-icon-dropdown-toggle"></div></div><nav class="dropdown-list w-dropdown-list"><div data-faq-a="true" class="rich-text-light w-richtext"><p>Placy Pro manages the setup and compliance process for you and in case of WhatsApp the approval usually takes a few days to a week. For other channels and tools you can expect either instant approval or up to one day. Learn more about the specific approval timelines from your manager. </p></div></nav></div></div><div role="listitem" class="w-dyn-item"><div data-delay="0" data-hover="false" class="dropdown-faq w-dropdown"><div class="dropdown-toggle-3 w-dropdown-toggle"><div data-faq-q="true" class="text-display-m black align-left">How do we measure ROI between the two approaches?</div><div class="icon-dropdown w-icon-dropdown-toggle"></div></div><nav class="dropdown-list w-dropdown-list"><div data-faq-a="true" class="rich-text-light w-richtext"><p>Measure time-to-value (how quickly leads are handled), lead conversion rate (quality after automation), agent time saved, and maintenance costs. Placy Pro typically shows quicker uplift in response times and conversion due to prebuilt qualification and phone/voice support; internal builds often show slower initial ROI and higher ongoing engineering expense.</p></div></nav></div></div><div role="listitem" class="w-dyn-item"><div data-delay="0" data-hover="false" class="dropdown-faq w-dropdown"><div class="dropdown-toggle-3 w-dropdown-toggle"><div data-faq-q="true" class="text-display-m black align-left">I can create a chatbot myself using ChatGPT. Why do I need Placy?</div><div class="icon-dropdown w-icon-dropdown-toggle"></div></div><nav class="dropdown-list w-dropdown-list"><div data-faq-a="true" class="rich-text-light w-richtext"><p>While tools like ChatGPT can be used to build basic chatbots, creating a fully functional, scalable, and integrated solution requires time, expertise, and ongoing maintenance. Placy saves you time and effort by providing a turnkey solution that’s ready to deploy, with advanced features and continuous updates to stay ahead of your business needs.</p><p>‍</p></div></nav></div></div><div role="listitem" class="w-dyn-item"><div data-delay="0" data-hover="false" class="dropdown-faq w-dropdown"><div class="dropdown-toggle-3 w-dropdown-toggle"><div data-faq-q="true" class="text-display-m black align-left">Can Placy Pro personalize messages for different leads?</div><div class="icon-dropdown w-icon-dropdown-toggle"></div></div><nav class="dropdown-list w-dropdown-list"><div data-faq-a="true" class="rich-text-light w-richtext"><p>Absolutely. Messages can be dynamically personalized based on user name, inquiry type, language, and other lead attributes available to Placy Pro.</p></div></nav></div></div><div role="listitem" class="w-dyn-item"><div data-delay="0" data-hover="false" class="dropdown-faq w-dropdown"><div class="dropdown-toggle-3 w-dropdown-toggle"><div data-faq-q="true" class="text-display-m black align-left">How much customization or engineering is required to get started?</div><div class="icon-dropdown w-icon-dropdown-toggle"></div></div><nav class="dropdown-list w-dropdown-list"><div data-faq-a="true" class="rich-text-light w-richtext"><p>Minimal for standard real-estate use cases. Because Placy ships with industry workflows and modules, onboarding is faster and requires less custom dev compared with a generic setup. Custom integrations or advanced workflows are available if you need them.</p></div></nav></div></div></div></div></section></main><section class="section-blog"><div class="padding-container"><div class="featured-posts-wrapper"><div class="section-large"><div class="header-wrapper-full margin-bottom"><h2 class="text-display-xl black">Check Out Our Latest Posts</h2></div><div class="latest-posts-wrapper"><div class="blog-list-wrapper margin-bottom"><div class="collection-blog-list-wrapper w-dyn-list"><div role="list" class="blog-collection-list w-dyn-items"><div role="listitem" class="w-dyn-item"><div class="blog-item"><div class="blog-link-wrapper"><a href="/post/we-are-hiring-oct-2025" class="blog-image-link w-inline-block"><div class="blog-image-wrapper"><img alt="" loading="lazy" src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/68fbb9065a1802c7a25fd626_placy-ai-is-hiring.avif" class="thumbnail-card-m"/></div></a><a href="/post/we-are-hiring-oct-2025" class="blog-title-link w-inline-block"><h5 class="text-body-l black align-left">We Are Hiring!</h5></a></div></div></div><div role="listitem" class="w-dyn-item"><div class="blog-item"><div class="blog-link-wrapper"><a href="/post/phone-and-messenger-leads-that-convert---heres-how" class="blog-image-link w-inline-block"><div class="blog-image-wrapper"><img alt="" loading="lazy" src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6851deb8f0ba67c80e6ca1de_Copilot_16x9.avif" sizes="100vw" srcset="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6851deb8f0ba67c80e6ca1de_Copilot_16x9-p-500.avif 500w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6851deb8f0ba67c80e6ca1de_Copilot_16x9-p-800.avif 800w, https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6851deb8f0ba67c80e6ca1de_Copilot_16x9.avif 1591w" class="thumbnail-card-m"/></div></a><a href="/post/phone-and-messenger-leads-that-convert---heres-how" class="blog-title-link w-inline-block"><h5 class="text-body-l black align-left">Phone and Messenger Leads That Convert - Here’s How!</h5></a></div></div></div><div role="listitem" class="w-dyn-item"><div class="blog-item"><div class="blog-link-wrapper"><a href="/post/placy-wins-audience-choice-award-at-kpmg-sil-investor-day" class="blog-image-link w-inline-block"><div class="blog-image-wrapper"><img alt="" loading="lazy" src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea493/6851d59beb785cb46a583213_1749815502810.avif" class="thumbnail-card-m"/></div></a><a href="/post/placy-wins-audience-choice-award-at-kpmg-sil-investor-day" class="blog-title-link w-inline-block"><h5 class="text-body-l black align-left">Placy Wins Audience Choice Award at KPMG SIL Investor Day!</h5></a></div></div></div></div></div></div><div class="button-group align-center"><a href="/blogs" class="button-xl-no-interactions outlined w-button">View all</a></div></div></div><div class="blog-divider"></div></div></div></section><footer class="footer-section"><div class="footer-content-wrapper"><div class="footer-top-part"><div class="footer-avatar-bubble-wrapper"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/676e8aaf799f62fef9a8a2c4_3ca9ec443e8b030f016ab42ae7706a90_avatar-img.avif" loading="lazy" alt="Placy AI Avatar" class="image-circle-l"/></div><div class="footer-content"><div id="w-node-_8d2f312f-fda0-3241-d220-7daf234aee7f-234aee79" class="footer-block"><div class="text-sub-display-l black align-left footer-size">Quick Links</div><a title="Home" href="/" aria-current="page" class="link-footer w--current">Home</a><a title="Blog" href="/blogs" class="link-footer">Blog</a><a title="Events" href="/events" class="link-footer">Events</a><a title="Media" href="/media" class="link-footer">Media</a><a title="Privacy notice" href="/policies/privacy-notice" class="link-footer">Privacy notice</a><a title="Cookies policy" href="/policies/cookies-policy" class="link-footer">Cookies policy</a></div><div id="w-node-_8d2f312f-fda0-3241-d220-7daf234aee8e-234aee79" class="footer-block"><div class="text-sub-display-l black align-left footer-size">Comparisons<br/></div><a title="Placy vs ChatGPT" href="/comparisons/placy-pro-vs-chatgpt" class="link-footer">Placy vs ChatGPT</a><a title="Placy vs Chatbot builders" href="/comparisons/placy-pro-vs-chatbots" class="link-footer">Placy vs Chatbot builders</a><a title="Placy vs CRMs" href="/comparisons/placy-pro-vs-crms" class="link-footer">Placy vs CRMs</a><a title="Placy vs Automations" href="/comparisons/placy-pro-vs-automations" class="link-footer">Placy vs Automations</a><a title="Placy vs Internal tools" href="/comparisons/placy-pro-vs-internal-tools" class="link-footer">Placy vs Internal tools</a></div><div id="w-node-_8d2f312f-fda0-3241-d220-7daf234aee9c-234aee79" class="footer-block"><div class="text-sub-display-l black align-left footer-size">Countries<br/></div><a title="Placy Pro in Cyprus" href="/countries/cyprus" class="link-footer">Cyprus</a><a title="Placy Pro in Greece" href="/countries/greece" class="link-footer">Greece</a><a title="Placy Pro in Spain" href="/countries/spain" class="link-footer">Spain</a><a title="Placy Pro in the UAE" href="/countries/uae" class="link-footer">United Arab Emirates</a><a title="Placy Pro in the UK" href="/countries/uk" class="link-footer">United Kingdom</a><a title="Placy Pro in the USA" href="/countries/usa" class="link-footer">United States</a><a title="Placy Pro in Canada" href="/countries/canada" class="link-footer">Canada</a><div class="footer-social-block"><a href="#" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124ac15112aad5_twitter%20small.svg" loading="lazy" alt=""/></a><a href="#" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a389912aad8_linkedin%20small.svg" loading="lazy" alt=""/></a><a href="#" class="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/62434fa732124a0fb112aab4/62434fa732124a51bf12aae9_facebook%20small.svg" loading="lazy" alt=""/></a></div></div></div></div><div class="footer-bottom-part"><div class="footer-big-logo"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/676fc498b48efc129a10d387_big%20logo.svg" loading="lazy" alt="Placy Logo"/></div><div class="w-layout-vflex flex-block-3"><div class="div-block-24"><a rel="me noopener noreferrer" href="https://www.youtube.com/@placyai" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466b2856173f68ed838e_6-youtube.svg" loading="lazy" alt="UI icon: Subscribe to Placy on YouTube" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://t.me/s/placy_ai" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466bc649d87c7fb23540_1-telegram.svg" loading="lazy" alt="UI icon: Join Placy on Telegram" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://www.instagram.com/placy.ai/" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466b8dfd9db5a578d7da_2-instagram.svg" loading="lazy" alt="UI icon: Follow Placy on Instagram" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://www.tiktok.com/@placy" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466bf0a8a59a150c9706_3-tiktok.svg" loading="lazy" alt="UI icon: Follow Placy on TikTok" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://www.facebook.com/placyai/" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466b6bb4198f6660ea6d_8a5198d08470062ce53e7948f7f94cd8_4-facebook.svg" loading="lazy" alt="UI icon: Follow Placy on Facebook" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://www.linkedin.com/company/placy-ai/" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466bf9a01d17cb355e63_1eeebf8a8db238fff7dad8af4275e341_5-linkedin.svg" loading="lazy" alt="UI icon: Follow Placy on LinkedIn" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://www.threads.net/@placy.ai" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466b66aae8c2df3025b5_7-threads.svg" loading="lazy" alt="UI icon: Follow Placy on Threads" class="social-icon"/></a><a rel="me noopener noreferrer" href="https://x.com/Placy_ai" target="_blank" class="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/68f1466b7c5cb4d608ef5cb0_8-x.svg" loading="lazy" alt="UI icon: Follow Placy on X" class="social-icon"/></a></div></div><div class="language-copyright-wrapper"><div class="text-body-l black align-left">Made by Humans &amp; AI</div><div class="text-body-l black align-left width-fixed">© 2025 Placy Ltd. All rights reserved.</div></div></div></div></footer><div class="lead-form-initial"><div data-w-id="96c94b79-7969-0c6b-6aa3-b9a9f99b60e8" class="popup-background"></div><section id="Contact-Section" class="section-request-demo"><div data-w-id="96c94b79-7969-0c6b-6aa3-b9a9f99b60ea" class="close-overlay"></div><div class="lead-form-block"><div class="container-small-demo-lead-form"><div class="padding-section-large-lead-form"><div class="lead-form-heading-paragraph"><div class="form-header-wrapper"><h3 class="text-display-l black">Book a Demo</h3><a data-w-id="96c94b79-7969-0c6b-6aa3-b9a9f99b60ec" href="#" class="close-button w-inline-block"><img src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/67a3730af630ada056500102_close-icon.svg" loading="lazy" alt="UI icon: Close"/></a></div><p class="text-body-xl black">Learn how Placy Pro can save you time and boost your deals with our innovative features</p></div><div class="embed-form-button w-embed w-iframe w-script"><iframe
+    src="https://api.leadconnectorhq.com/widget/form/D4dD2EsmnE18Dq5yCkHQ"
+    style="width:100%;height:625px;border:none;border-radius:0px"
+    id="inline-D4dD2EsmnE18Dq5yCkHQ" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Book Demo Website EN"
+    data-height="625"
+    data-layout-iframe-id="inline-D4dD2EsmnE18Dq5yCkHQ"
+    data-form-id="D4dD2EsmnE18Dq5yCkHQ"
+    title="Book Demo Website EN"
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script></div></div></div></div></section></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66ace00354b95dd5f8fea3cf" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/js/webflow.schunk.8208d3e53b97e3c7.js" type="text/javascript" integrity="sha384-9xvGwEC4koTEApHZvbdIKXkNvNgqp7+4eQZ+/iUkKstGjbbCAhAfePKaCJKPjB3X" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/js/webflow.schunk.3bc6ca15b47e2f3d.js" type="text/javascript" integrity="sha384-VNxYua0OyZJJO3yr5a82z2vKkSG6dWCG5rXh/x4w+suHEs4rSJTuNOfUFAMrIlme" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/js/webflow.schunk.a5328fc6e4f79712.js" type="text/javascript" integrity="sha384-qeNjdwYkJwsfLBrocVqUy8p1pZHPgmdkAHoaD0aqlRHuYk9wxDd/F58uhEe0JNNJ" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/66ace00354b95dd5f8fea3cf/js/webflow.9946aa09.a466beb36e2d0d2f.js" type="text/javascript" integrity="sha384-ux38FF+QY5MY1c4KxXGO7cdtP2Bb0udiTvYWJQz01VaK5X1WJ4fmXohjQj/Kdi4s" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('global-lead-form');
+  const closeBtn = popup ? popup.querySelector('.popup-close-button') : null;
+  const background = popup ? popup.querySelector('.popup-background-close') : null;
+
+  if (popup) {
+    // Hide popup by default
+    popup.style.display = 'none';
+    popup.style.opacity = '0';
+    popup.style.transition = 'opacity 0.4s ease';
+
+    // Show popup after 5 minutes (300000 ms)
+    setTimeout(() => {
+      popup.style.display = 'block';
+      requestAnimationFrame(() => {
+        popup.style.opacity = '1';
+      });
+    }, 300000);
+  }
+
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popup.style.opacity = '0';
+      setTimeout(() => popup.style.display = 'none', 400);
+    });
+  }
+
+  
+  if (background) {
+    background.addEventListener('click', () => {
+      popup.style.opacity = '0';
+      setTimeout(() => popup.style.display = 'none', 400);
+    });
+  }
+});
+</script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.querySelector('.global-lead-form');
+
+  if (!popup) return;
+
+  document.querySelectorAll('a[href="#bookademo"], button[href="#bookademo"], [data-href="#bookademo"]').forEach(trigger => {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      popup.style.display = 'flex';
+      requestAnimationFrame(() => popup.classList.add('is-visible'));
+      document.body.style.overflow = 'hidden'; 
+    });
+  });
+
+  
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup || e.target.closest('.close-button')) {
+      popup.classList.remove('is-visible');
+      setTimeout(() => (popup.style.display = 'none'), 300);
+      document.body.style.overflow = ''; 
+    }
+  });
+});
+</script><script>
+  $(document).ready(function() {
+    const lottieWebflow = Webflow.require("lottie");
+
+    $(".primary-feature-item").each(function() {
+      const $item = $(this);
+      const lottieValue = $item.attr("data-lottie") || "1";
+
+      $item.find(".lottie-1, .lottie-2, .lottie-3, .lottie-4, .lottie-5").hide();
+      const $currentLottie = $item.find(".lottie-" + lottieValue).show();
+
+      const lottieInstance = lottieWebflow.createInstance($currentLottie[0]);
+      $item.data("lottieInstance", lottieInstance);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const $item = $(entry.target);
+        const lottieInstance = $item.data("lottieInstance");
+        if (!lottieInstance) return;
+
+        entry.isIntersecting ? lottieInstance.play() : lottieInstance.stop();
+      });
+    }, { threshold: 0.1 });
+
+    $(".primary-feature-item").each(function() {
+      observer.observe(this);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".slider-item").forEach(item => {
+      const targetClass = `lottie-s-${item.dataset.number}`;
+      
+      item.querySelectorAll("[class^='lottie-s-']").forEach(lottie => {
+        lottie.style.display = lottie.classList.contains(targetClass) ? "block" : "none";
+      });
+    });
+  });
+</script>
+
+<style>
+  .read-more, .read-less {
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const maxLength = 200;
+
+  document.querySelectorAll(".text-testimonial").forEach(el => {
+    const fullText = el.innerHTML.trim();
+    if (fullText.length <= maxLength) return;
+
+    const shortText = fullText.substring(0, maxLength) + "... ";
+    let isExpanded = false;
+
+    function toggleText() {
+      isExpanded = !isExpanded;
+      el.innerHTML = isExpanded
+        ? fullText + ' <span class="read-less">Less</span>'
+        : shortText + '<span class="read-more">More</span>';
+
+      el.querySelector(isExpanded ? ".read-less" : ".read-more")
+        .addEventListener("click", toggleText);
+    }
+
+    el.innerHTML = shortText + '<span class="read-more">More</span>';
+    el.querySelector(".read-more").addEventListener("click", toggleText);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+(function () {
+  const qEls = Array.from(document.querySelectorAll('[data-faq-q]'));
+
+  const items = qEls.map((qEl) => {
+    const item = qEl.closest('.w-dropdown') || qEl.closest('.Dropdown-FAQ') || qEl.parentElement;
+    const aEl = item ? item.querySelector('[data-faq-a]') : null;
+
+    const q = (qEl.textContent || '').trim();
+    const a = (aEl ? aEl.textContent : '').trim();
+
+    return q && a ? { q, a } : null;
+  }).filter(Boolean);
+
+  if (!items.length) return;
+  if (document.querySelector('script[data-faq-schema]')) return;
+
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map(i => ({
+      "@type": "Question",
+      "name": i.q,
+      "acceptedAnswer": { "@type": "Answer", "text": i.a }
+    }))
+  };
+
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.setAttribute('data-faq-schema', 'true');
+  s.textContent = JSON.stringify(json);
+  document.head.appendChild(s);
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  
+  if (window.Webflow && (Webflow.env('editor') || Webflow.env('design'))) return;
+
+  document.querySelectorAll('.h1-rotator').forEach(function(rotator){
+    var items = Array.from(rotator.querySelectorAll('.rotator-active'));
+    if (items.length < 2) return;
+
+    
+    var i = items.findIndex(function(el){ return el.classList.contains('is-current'); });
+    if (i < 0) { i = 0; items[0].classList.add('is-current'); }
+
+    var INTERVAL = 3000, timer;
+
+    function next(){
+      items[i].classList.remove('is-current');
+      i = (i + 1) % items.length;
+      items[i].classList.add('is-current');
+    }
+
+    timer = setInterval(next, INTERVAL);
+
+    
+    rotator.addEventListener('mouseenter', function(){ clearInterval(timer); });
+    rotator.addEventListener('mouseleave', function(){ 
+      clearInterval(timer);
+      timer = setInterval(next, INTERVAL);
+    });
+
+    
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      clearInterval(timer);
+      items.forEach(function(el){ el.classList.remove('is-current'); });
+      items[0].classList.add('is-current');
+    }
+  });
+})();
+</script>
+</body></html>

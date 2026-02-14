@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Custom Theme (Tailwind v4) ─── */
+@theme {
+  /* Font */
+  --font-sans: "Inter", sans-serif;
+
+  /* Breakpoints — aligned to Webflow */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  /* Colors — Core */
+  --color-body: #333333;
+  --color-grey: #b3b3b3;
+
+  /* Colors — Brand accents */
+  --color-brand-green: #37df7a;
+  --color-brand-green-button: #1aba65;
+  --color-brand-green-hover: #17aa5c;
+  --color-brand-violet: #e456e0;
+  --color-brand-yellow: #efa943;
+  --color-brand-blue: #15b8ff;
+
+  /* Colors — Dark sections (navy palette) */
+  --color-navy-deep: #111725;
+  --color-navy-midnight: #050713;
+  --color-navy-gunmetal: #2c3549;
+  --color-navy-charcoal: #151a26;
+
+  /* Colors — Slate (muted blues/grays for dark themes) */
+  --color-slate-steel: #6d809c;
+  --color-slate-blue: #606c85;
+  --color-slate-cadet: #96a0be;
+
+  /* Colors — Gradient palette */
+  --color-gradient-sky: #a4c7f1;
+  --color-gradient-dodger: #1fa2ff;
+  --color-gradient-mint: #a6ffcb;
+  --color-gradient-periwinkle: #5153ce;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-fade-down: fade-down 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.22em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fade-down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0.22em);
+  }
+}
+
+/* ─── Base Styles ─── */
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* ─── Accessibility: Focus-visible ─── */
+:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove outline on non-keyboard focus */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Accessibility: Skip to content link ─── */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 24px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #111;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 12px;
+}
+
+/* ─── Logo Marquee Animation ─── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Accessibility: Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
 }
